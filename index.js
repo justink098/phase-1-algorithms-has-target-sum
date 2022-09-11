@@ -1,12 +1,29 @@
 function hasTargetSum(array, target) {
+  for(i=0;i < array.length; i++){
+    let sum = target-array[i]
+    for(j= i+1; j < array.length; j++){
+      if(array[j] === sum){
+        return true
+      }
+    }
+    return false;
+    } 
   // Write your algorithm here
 }
 
 /* 
   Write the Big O time complexity of your function here
-*/
+Runtime; O(n^2)
+space: O(n)
+  */
 
 /* 
+   iterate through each number in the array
+    for the current number identify the compiment that adds to the target (sum = target -num)
+    iterate through the rest of the array
+    check if any number is our complement
+    if so return true
+    if i reach the end of the array, return false
   Add your pseudocode here
 */
 
